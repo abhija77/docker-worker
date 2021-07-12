@@ -4,4 +4,14 @@ services:
     worker:
         image: "abhija/worker"
         ports: 
-            - 8090-8093:8080
+            - 8090
+        environment: 
+            - ADD=false
+            - MULT=true
+    worker2:
+        image: "abhija/worker"
+        ports: 
+            - 8091
+        environment: 
+            - ADD=true
+            - MULT=false
